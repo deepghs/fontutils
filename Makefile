@@ -43,4 +43,5 @@ pdocs:
 	$(MAKE) -C "${DOC_DIR}" prod
 
 dataset:
-	hfutils download -r deepghs/fontutils_unittest -a unsplash_1000.zip -o ${TEST_DIR}/testfile/dataset/unsplash_1000
+	echo 'no dataset to load'
+#hfutils download -r deepghs/fontutils_unittest -a unsplash_1000.zip -o ${TEST_DIR}/testfile/dataset/unsplash_1000
