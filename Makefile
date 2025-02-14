@@ -45,3 +45,7 @@ pdocs:
 dataset:
 	echo 'no dataset to load'
 #hfutils download -r deepghs/fontutils_unittest -a unsplash_1000.zip -o ${TEST_DIR}/testfile/dataset/unsplash_1000
+
+assets: langs
+langs:
+	$(PYTHON) -m tools.langs.count

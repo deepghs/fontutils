@@ -1228,3 +1228,4 @@ fabric.properties
 /meta.json
 /preprocess.json
 venv*
+*.csv.*

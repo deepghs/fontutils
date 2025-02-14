@@ -11,3 +11,4 @@ hfutils>=0.4.2
 filelock
 dghs-imgutils>=0.9.3
 shapely!=2.0.7
+fontTools>=4.55.0
