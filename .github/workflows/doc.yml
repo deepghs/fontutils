@@ -45,6 +45,7 @@ jobs:
           dot -V
           python -m pip install -r requirements.txt
           python -m pip install -r requirements-doc.txt
+          python -m pip install -r requirements-tools.txt
       - name: Download Dataset
         if: ${{ github.event_name == 'push' }}
         shell: bash
@@ -113,6 +114,7 @@ jobs:
           dot -V
           python -m pip install -r requirements.txt
           python -m pip install -r requirements-doc.txt
+          python -m pip install -r requirements-tools.txt
       - name: Sync from ref
         if: ${{ github.event_name == 'push' }}
         run: |
