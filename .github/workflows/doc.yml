@@ -50,6 +50,10 @@ jobs:
         shell: bash
         run: |
           make dataset
+      - name: Download Assets
+        shell: bash
+        run: |
+          make assets
       - name: Generate the contents
         if: ${{ github.event_name == 'push' }}
         env:
@@ -117,6 +121,10 @@ jobs:
         shell: bash
         run: |
           make dataset
+      - name: Download Assets
+        shell: bash
+        run: |
+          make assets
       - name: Generate
         env:
           ENV_PROD: 'true'

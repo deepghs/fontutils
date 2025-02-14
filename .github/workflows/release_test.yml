@@ -33,6 +33,10 @@ jobs:
           if [ -f requirements-build.txt ]; then pip install -r requirements-build.txt; fi
           if [ -f requirements-test.txt ]; then pip install -r requirements-test.txt; fi
           pip install --upgrade build
+      - name: Download Assets
+        shell: bash
+        run: |
+          make assets
       - name: Build packages
         run: |
           make package

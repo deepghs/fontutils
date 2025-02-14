@@ -100,6 +100,10 @@ jobs:
         shell: bash
         run: |
           make dataset
+      - name: Download Assets
+        shell: bash
+        run: |
+          make assets
       - name: Run unittest
         env:
           CI: 'true'
