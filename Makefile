@@ -43,7 +43,7 @@ pdocs:
 	$(MAKE) -C "${DOC_DIR}" prod
 
 dataset:
-	echo 'no dataset to load'
+	$(PYTHON) -m hfutils download -r deepghs/fontutils_unittest -a font_files.zip -o ${TESTFILE_DIR}/fonts
 #hfutils download -r deepghs/fontutils_unittest -a unsplash_1000.zip -o ${TEST_DIR}/testfile/dataset/unsplash_1000
 
 assets: langs
