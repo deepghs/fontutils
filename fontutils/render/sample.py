@@ -31,9 +31,7 @@ def render_text_with_font(
                 unsupported.add(char)
 
             font = custom_font if char in supported else default_font
-            print((char, bbox, 'default' if font is default_font else 'custom'))
             left, top, right, bottom = font.getbbox(char)
-            print((left, top, right, bottom))
             line_width += (0 if line_width == 0 else char_interval) + (right - left)
             line_height = max(line_height, font.getmetrics()[0])
 

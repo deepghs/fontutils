@@ -14,11 +14,11 @@ def _load_bayesian():
     )
 
 
-def font_systems_comp(font: FontTyping, select: Optional[str] = None):
+def font_systems_comp(font: FontTyping, select: Optional[str] = 'L'):
     return _load_bayesian().font_comp(font=font, select=select)
 
 
-def font_systems_prob(font: FontTyping, select: Optional[str] = None, topk: int = 5):
+def font_systems_prob(font: FontTyping, select: Optional[str] = 'L', topk: int = 5):
     return _load_bayesian().font_prob(
         font=font,
         select=select,

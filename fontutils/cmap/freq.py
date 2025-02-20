@@ -58,7 +58,7 @@ class BayesianFreqAnalysis:
         included_list = id_list.map(lambda x: x in cmap_set)
         return np.array(included_list)
 
-    def font_comp(self, font: FontTyping, select: Optional[str] = None):
+    def font_comp(self, font: FontTyping, select: Optional[str] = 'L'):
         font, fn_close = load_font_with_soft_close(font)
         try:
             char_mask = self._load_cmap_mask(set(font.getBestCmap().keys()), select=select).astype(np.float32)
@@ -70,7 +70,7 @@ class BayesianFreqAnalysis:
         finally:
             fn_close()
 
-    def font_prob(self, font: FontTyping, select: Optional[str] = None, topk: int = 5):
+    def font_prob(self, font: FontTyping, select: Optional[str] = 'L', topk: int = 5):
         font, fn_close = load_font_with_soft_close(font)
         try:
             char_mask = self._load_cmap_mask(set(font.getBestCmap().keys()), select=select)
