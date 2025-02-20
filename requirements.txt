@@ -1,5 +1,5 @@
 hbutils>=0.9.0
-pillow
+pillow>=10
 numpy<2
 scikit-learn
 huggingface_hub
